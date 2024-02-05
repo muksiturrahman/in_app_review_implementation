@@ -7,11 +7,11 @@ class CustomAppBar {
     required bool isMenuPage,
   }) {
     return AppBar(
-      // foregroundColor: Colors.white,
-      // forceMaterialTransparency: true,
-      // automaticallyImplyLeading: false,
-      // backgroundColor: Colors.white,
-      // titleSpacing: 0.0,
+      foregroundColor: Colors.white,
+      forceMaterialTransparency: true,
+      automaticallyImplyLeading: false,
+      backgroundColor: Colors.white,
+      titleSpacing: 0.0,
       centerTitle: true,
       leading: Container(
         padding: EdgeInsets.symmetric(horizontal: isMenuPage? 5 : 15, vertical: isMenuPage? 18 : 20),
