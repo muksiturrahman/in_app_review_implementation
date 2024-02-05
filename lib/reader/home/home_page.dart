@@ -1,3 +1,4 @@
+import 'package:bdjournal/reader/home/details_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePageScreen extends StatefulWidget {
@@ -34,7 +35,14 @@ class _HomePageScreenState extends State<HomePageScreen> {
                   child: Container(
                     margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
                     child: Column(
-                      children: [Text('body')],
+                      children: [
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsPage()));
+                          },
+                            child: Text('Details Page',style: TextStyle(fontSize: 30),),
+                        )
+                      ],
                     ),
                   )),
             ),
