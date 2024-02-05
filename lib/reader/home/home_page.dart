@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../components/custom_view/custom_listview.dart';
+import '../../components/custom_view/single_news_section.dart';
+
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({Key? key}) : super(key: key);
 
@@ -24,22 +27,10 @@ class _HomePageScreenState extends State<HomePageScreen> {
   }
 
   Widget initBuildUi() {
-    return Stack(
+    return Column(
       children: [
-        Column(
-          children: [
-            Text('app bar'),
-            Expanded(
-              child: SingleChildScrollView(
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: Column(
-                      children: [Text('body')],
-                    ),
-                  )),
-            ),
-          ],
-        ),
+        SingleNewsSection(),
+        CustomNewsList(),
       ],
     );
   }

@@ -7,46 +7,7 @@ abstract class AppConstant {
 
   //images
   static const String imageBase = "assets/images/";
-  static const String appLogo = "${imageBase}smart_job_logo.png";
-  static const String appSponsor = "${imageBase}splash_screen_footer.png";
-  static const String signInUPText = "${imageBase}sign_in_or_sign_up_with_mobile.png";
-  static const String loginButton = "${imageBase}login_button.png";
-  static const String registrationButton = "${imageBase}registration_button.png";
-  static const String facebookIcon = "${imageBase}facebook_icon_.png";
-  static const String googleIcon = "${imageBase}google_icon.png";
-  static const String twitterIcon = "${imageBase}twitter_icon.png";
-  static const String homeIcon = "${imageBase}home.png";
-  static const String calenderIcon = "${imageBase}calender.png";
-  static const String resultIcon = "${imageBase}result.png";
-  static const String profileIcon = "${imageBase}profile.png";
-  static const String notificationIcon = "${imageBase}notification.png";
-  static const String notificationGreenIcon = "${imageBase}notification_green.png";
-  static const String searchIcon = "${imageBase}search.png";
-  static const String pencilIcon = "${imageBase}pencil.png";
-  static const String officeLogoIcon = "${imageBase}office_logo.png";
-  static const String shareIcon = "${imageBase}share_icon.png";
-  static const String officeIcon = "${imageBase}office_icon.png";
-  static const String bagIcon = "${imageBase}bag.png";
-  static const String downloadIcon = "${imageBase}download.png";
-  static const String bookmarkIcon = "${imageBase}bookmark_icon.png";
-  static const String officeBagIcon = "${imageBase}office_bag_icon.png";
-  static const String triangleArrowIcon = "${imageBase}triangle_arrow.png";
-  static const String hamburgerIcon = "${imageBase}hamburger_icon.png";
-  static const String cameraIcon = "${imageBase}camera_icon.png";
-  static const String backIcon = "${imageBase}back_icon.png";
-  static const String eyeIcon = "${imageBase}eye_icon.png";
-
-  //string
-  static const String logoAnimationTag = "hero";
-  static const String keyword  = 'keyword';
-  static const String language  = 'lang';
-  static const String searchYourJobText  = 'Search Your Job';
-  static const String jobCategoryIdText  = 'job_category_id';
-  static const String siteTypeIdText  = 'site_type_id';
-  static const String siteIdText  = 'site_id';
-  static const String pageText  = 'page';
-  static const String limitText  = 'limit';
-  static const String noJobAvailabilityText  = 'No job Available for';
+  static const String errorImagePath = "$imageBase/backup.png";
   static const String noDataFoundText  = 'No Data Found';
   static const String pleaseWaitText  = 'Please Wait';
 

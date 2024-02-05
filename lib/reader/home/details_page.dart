@@ -12,7 +12,7 @@ class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar.appBar(context, isHome: false, isMenupage: false),
+      //appBar: CustomAppBar.appBar(context, isHome: false, isMenuPage: false),
       body: initBuildUi(),
     );
   }
