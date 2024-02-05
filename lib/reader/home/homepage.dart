@@ -1,4 +1,5 @@
 
+import 'package:bdjournal/reader/home/details_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/color/app_color.dart';
@@ -39,7 +40,8 @@ class _HomePageState extends State<HomePage> {
               label: AppString.searchPlainText,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.),
+              //TODO IMPLEMENT
+              icon: Icon(Icons.important_devices),
               label: AppString.latestPlainText,
             ),
           ],
@@ -71,7 +73,16 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
                 child: Column(
-                  children: [Text('body')],
+                  children: [
+                    Center(
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailsPage()));
+                        },
+                          child: Text('Tap Here',style: TextStyle(fontSize: 30),),
+                      ),
+                    ),
+                  ],
                 ),
               )),
         ),
