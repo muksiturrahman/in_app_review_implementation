@@ -1,7 +1,7 @@
 
 import 'package:bdjournal/reader/home/details_page.dart';
 import 'package:flutter/material.dart';
-
+import './reusable_appbar.dart';
 import '../../utils/color/app_color.dart';
 import '../../utils/string/app_string.dart';
 import '../../utils/style/app_style.dart';
@@ -29,6 +29,7 @@ class _DashboardPageState extends State<DashboardPage> {
     heightSize = MediaQuery.of(context).size.height;
     List<Widget> pages = [HomePageScreen(),SearchPage(),LatestNewsScreen(),];
     return Scaffold(
+        appBar: CustomAppBar.appBar(context, isHome: true, isMenuPage: false),
         body: SafeArea(child: pages[selectedIndex]),
         bottomNavigationBar: BottomNavigationBar(
           items: [
@@ -47,7 +48,7 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
           ],
           selectedItemColor: AppColor.roseMadder,
-          selectedLabelStyle: AppStyle.selectedBottomItem(),
+          selectedLabelStyle: AppStyle.roseMadderTextStyle(),
           unselectedItemColor: AppColor.carbonGrey,
           unselectedLabelStyle: TextStyle(color: Colors.grey),
           selectedIconTheme:

@@ -7,4 +7,5 @@ abstract class AppColor {
   static const Color carbonGrey = Color(0xFF5F5D5E);
   static const Color roseMadder = Color(0xFFE61E29);
   static const Color white = Colors.white;
+  static const Color newsHeadLineColor1 = Colors.white;
 }
