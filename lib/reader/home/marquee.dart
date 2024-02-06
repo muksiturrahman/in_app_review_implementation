@@ -1,5 +1,9 @@
+import 'package:bdjournal/utils/color/app_color.dart';
+import 'package:bdjournal/utils/values/app_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:marquee/marquee.dart';
+
+import '../../utils/style/app_style.dart';
 
 class CustomMarquee extends StatefulWidget {
   final String title;
@@ -27,13 +31,14 @@ class _CustomMarqueeState extends State<CustomMarquee> {
       children: <Widget>[
         if (isContainerVisible)
           Container(
-            color: Colors.blue,
+            //color: AppColor.roseMadder,
             width: double.infinity,
             child: Row(
               children: [
                 Container(
                   height: 30,
                   width: 80,
+              color: AppColor.roseMadder,
                   child: Center(
                     child: Text(
                       widget.title,
@@ -46,21 +51,13 @@ class _CustomMarqueeState extends State<CustomMarquee> {
                   ),
                 ),
                 Container(
-                  height: 25,
-                  width: 1,
-                  color: Colors.white,
-                ),
-                SizedBox(width: 3),
-                Container(
                   width: MediaQuery.of(context).size.width / 1.5,
                   height: 30,
+                  color: AppColor.seaShell,
+                  alignment: Alignment.center,
                   child: Marquee(
                     text: widget.texts.join(' * '),
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.normal,
-                    ),
+                    style: AppStyle.blackNormal20(),
                     scrollAxis: Axis.horizontal,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     blankSpace: 20.0,
@@ -72,19 +69,6 @@ class _CustomMarqueeState extends State<CustomMarquee> {
                     decelerationCurve: Curves.easeOut,
                   ),
                 ),
-                SizedBox(width: 3),
-                Container(
-                  height: 25,
-                  width: 1,
-                  color: Colors.white,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8),
-                  child: GestureDetector(
-                    onTap: toggleContainerVisibility,
-                    child: Icon(Icons.backspace_outlined, color: Colors.white),
-                  ),
-                )
               ],
             ),
           ),
