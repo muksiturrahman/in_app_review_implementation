@@ -1,4 +1,5 @@
 import 'package:bdjournal/reader/home/details_page.dart';
+import 'package:bdjournal/utils/color/app_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/custom_view/banner_list_widget.dart';
@@ -27,7 +28,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
   Widget build(BuildContext context) {
     widthSize = MediaQuery.of(context).size.width;
     heightSize = MediaQuery.of(context).size.height;
-    return Scaffold(body: initBuildUi());
+    return Scaffold(body: initBuildUi(),backgroundColor: AppColor.desertStorm,);
   }
 
   Widget initBuildUi() {

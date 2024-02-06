@@ -1,6 +1,8 @@
 import 'package:bdjournal/reader/home/reusable_appbar.dart';
 import 'package:flutter/material.dart';
 
+import '../../components/custom_view/banner_list_widget.dart';
+
 class DetailsPage extends StatefulWidget {
   const DetailsPage({Key? key}) : super(key: key);
 
@@ -155,7 +157,7 @@ class _DetailsPageState extends State<DetailsPage> {
               SizedBox(
                 height: 15,
               ),
-              Text(
+              /*Text(
                 'আরও পড়ুন',
                 style: TextStyle(
                   // color: CustomColors.sectionColor,
@@ -163,9 +165,10 @@ class _DetailsPageState extends State<DetailsPage> {
                   fontWeight: FontWeight.normal,
                   fontFamily: 'SolaimanLipi',
                 ),
-              ),
+              ),*/
               // ReusableDivider(),
               // FooterSection(),
+              BannerListScreen(banner: 'আরও খবর',),
               SizedBox(
                 height: 10,
               ),
