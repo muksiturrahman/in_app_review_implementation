@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'menu_page.dart';
+
 class CustomAppBar {
   static PreferredSizeWidget appBar(
     BuildContext context, {
@@ -20,12 +22,12 @@ class CustomAppBar {
             if (isMenuPage) {
               Navigator.pop(context);
             } else {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => MenuPage(isFromHome: true),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MenuPage(),
+                ),
+              );
             }
           },
           child: isMenuPage
@@ -45,7 +47,7 @@ class CustomAppBar {
                 // Navigator.pushReplacement(context,
                 //     MaterialPageRoute(builder: (context) => HomePage()));
               },
-        child: Image.asset("assets/images/app_logo.png", width: 150),
+        child: Image.asset("assets/images/app_logo.png", width: 180),
       ),
     );
   }
