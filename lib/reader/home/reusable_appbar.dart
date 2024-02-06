@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
 import 'menu_page.dart';
 
 class CustomAppBar {
@@ -44,8 +45,8 @@ class CustomAppBar {
         onTap: isHome
             ? null
             : () {
-                // Navigator.pushReplacement(context,
-                //     MaterialPageRoute(builder: (context) => HomePage()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => HomePageScreen()));
               },
         child: Image.asset("assets/images/app_logo.png", width: 180),
       ),

@@ -29,8 +29,7 @@ class _CustomMarqueeState extends State<CustomMarquee> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        if (isContainerVisible)
-          Container(
+          SizedBox(
             //color: AppColor.roseMadder,
             width: double.infinity,
             child: Row(
