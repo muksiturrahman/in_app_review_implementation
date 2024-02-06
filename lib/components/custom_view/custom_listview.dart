@@ -9,9 +9,10 @@ import '../../utils/values/app_constant.dart';
 
 class CustomNewsList extends StatefulWidget {
 
-  const CustomNewsList({
+  bool showImage;
+  CustomNewsList({
     super.key,
-
+    required this.showImage
   });
 
   @override
@@ -33,6 +34,7 @@ class _CustomNewsListState extends State<CustomNewsList> {
         itemCount: 3,
         itemBuilder: (context, index) {
           return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Divider(
                 color: Colors.grey.shade200,
@@ -44,24 +46,6 @@ class _CustomNewsListState extends State<CustomNewsList> {
                     cPos = index;
                   });*/
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailsPage()));
-                  /*Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => NewsDetailsPage(
-                        newsModel: widget.newsModel
-                            .elementAt(index + widget.startFrom),
-                        breadCrumb: widget.breadCrumb,
-                        isChildPage: false,
-                        uniqueId: widget.uniqueId,
-                        isCatId: widget.isCatId,
-                        isLatest: widget.isLatest,
-                        isPopular: widget.isPopular,
-                        isAppBarVisible: widget.isAppBarVisible,
-                        childMenuList: widget.childMenuList,
-                        parentName: widget.parentName,
-                      ),
-                    ),
-                  );*/
                   setState(() {
                     isHovered = false;
                     cPos = 0;
@@ -69,7 +53,8 @@ class _CustomNewsListState extends State<CustomNewsList> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: Row(
+                  child: widget.showImage?
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
@@ -101,6 +86,10 @@ class _CustomNewsListState extends State<CustomNewsList> {
                       ),
 
                     ],
+                  ):
+                  SizedBox(
+                      width: MediaQuery.of(context).size.width / 1.7,
+                      child: Text("যুদ্ধ বিরতির প্রথম দিনে গাজায় গেল ২০০ ত্রাণবাহী ট্রাক",style: AppStyle.blackFontTextStyle().copyWith(fontSize: 15),)
                   ),
                 ),
               ),

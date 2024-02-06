@@ -6,7 +6,7 @@ abstract class AppConstant {
   static const String sutonny = "SutonnyMJ";
 
   //images
-  static const String imageBase = "assets/images/";
+  static const String imageBase = "assets/images";
   static const String errorImagePath = "$imageBase/backup.png";
   static const String noDataFoundText  = 'No Data Found';
   static const String pleaseWaitText  = 'Please Wait';

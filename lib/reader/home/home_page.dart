@@ -1,6 +1,7 @@
 import 'package:bdjournal/reader/home/details_page.dart';
 import 'package:flutter/material.dart';
 
+import '../../components/custom_view/banner_list_widget.dart';
 import '../../components/custom_view/custom_listview.dart';
 import '../../components/custom_view/single_news_section.dart';
 
@@ -28,11 +29,16 @@ class _HomePageScreenState extends State<HomePageScreen> {
   }
 
   Widget initBuildUi() {
-    return Column(
-      children: [
-        SingleNewsSection(),
-        CustomNewsList(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SingleNewsSection(),
+          CustomNewsList(showImage: true),
+          BannerListScreen(banner: 'বাংলাদেশ',),
+          BannerListScreen(banner: 'আন্তর্জাতিক',),
+          BannerListScreen(banner: 'শিক্ষা',),
+        ],
+      ),
     );
   }
 }
