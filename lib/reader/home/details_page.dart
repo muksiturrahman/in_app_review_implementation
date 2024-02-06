@@ -71,7 +71,7 @@ class _DetailsPageState extends State<DetailsPage> {
                               // color: CustomColors.newsHeadLineColor2,
                             ),
                           ),
-                          Text("25 november, 2023 6:31",style: TextStyle(fontSize: 16,),),
+                          Text("২৫ নভেম্বর, ২০২৩ ৬:৩১",style: TextStyle(fontSize: 16,),),
                         ],
                       ),
                       Row(
@@ -84,7 +84,7 @@ class _DetailsPageState extends State<DetailsPage> {
                               // color: CustomColors.newsHeadLineColor2,
                             ),
                           ),
-                          Text("25 november, 2023 6:31",style: TextStyle(fontSize: 16,),),
+                          Text("২৫ নভেম্বর, ২০২৩ ৬:৩১",style: TextStyle(fontSize: 16,),),
                         ],
                       ),
                     ],
@@ -92,8 +92,8 @@ class _DetailsPageState extends State<DetailsPage> {
                   Row(
                     children: [
                       Icon(Icons.share),
-                      Icon(Icons.share),
-                      Icon(Icons.share),
+                      Icon(Icons.facebook),
+                      Icon(Icons.messenger),
                     ],
                   ),
                 ],
