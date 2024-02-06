@@ -1,3 +1,4 @@
+import 'package:bdjournal/reader/home/details_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/custom_view/custom_listview.dart';
